@@ -1,7 +1,19 @@
 {
   "name": "@vwtickets/common",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "./build/index.js",
+  "types": "./build/index.d.ts",
+  "files": [
+    "build/**/*"
+  ],
+  "scripts": {
+    "clean": "del ./build/*",
+    "build": "yarn run clean && tsc"
+  },
   "description": "",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "del-cli": "^5.0.0",
+    "typescript": "^4.9.4"
+  }
 }
